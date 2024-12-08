@@ -1,0 +1,108 @@
+/* Style pour le body afin de centrer le contenu */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
+/* Style pour le conteneur du formulaire */
+form {
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du titre */
+.auth-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Style pour les champs de saisie */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Effet de survol et de focus sur les champs de saisie */
+input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Style pour le bouton */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Effet de survol du bouton */
+button:hover {
+  background-color: #004080;
+}
+
+/* Style du bouton Google */
+.google-signin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #757575;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.google-signin button:hover {
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.google-signin button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.google-signin button:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.5);
+}
+
+/* Style pour les messages d'erreur */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+

@@ -1,24 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Auth } from './components/auth';
+import Departments from './components/departments';
+import AddDepartment from "./components/AddDepartment";
+import EditDepartment from "./components/EditDepartment";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Auth />} />
+          {/* Route protégée pour /departments */}
+          <Route
+            path="/departments"
+            element={
+              <ProtectedRoute>
+                <Departments />
+              </ProtectedRoute>
+            }
+          />
+          {/* Routes protégées pour /add-department et /edit-department */}
+           <Route
+          path="/add-department"
+          element={
+            <ProtectedRoute>
+              <AddDepartment />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/edit-department/:id"
+          element={
+            <ProtectedRoute>
+              <EditDepartment />
+            </ProtectedRoute>
+          }
+        />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
