@@ -6,7 +6,7 @@ import {getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyABHidyiwc2ySCnuIGlTNvh8W225SuQnE4",
+  apiKey: "",
   authDomain: "react-contact-39e77.firebaseapp.com",
   projectId: "react-contact-39e77",
   storageBucket: "react-contact-39e77.firebasestorage.app",
